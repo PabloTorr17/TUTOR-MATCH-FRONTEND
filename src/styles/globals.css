@@ -1,0 +1,91 @@
+/* globals.css — TutorMatch v2 */
+/* Aesthetic: Editorial brutalism meets precision engineering */
+/* White base · Electric green accent · Stark geometric forms */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --bg:        #f8f7f4;
+  --bg-2:      #f0efe9;
+  --bg-3:      #e8e6de;
+  --surface:   #ffffff;
+  --ink:       #0d0d0d;
+  --ink-2:     #3a3a3a;
+  --ink-3:     #7a7a7a;
+  --ink-4:     #b0b0b0;
+  --line:      #d8d6ce;
+  --line-2:    #ebebeb;
+
+  --green:     #00e676;
+  --green-dim: rgba(0,230,118,0.12);
+  --green-bd:  rgba(0,230,118,0.35);
+
+  --red:       #ff3b3b;
+  --red-dim:   rgba(255,59,59,0.1);
+  --blue:      #0057ff;
+  --blue-dim:  rgba(0,87,255,0.1);
+  --amber:     #ff9500;
+  --amber-dim: rgba(255,149,0,0.1);
+
+  --status-available: #00e676;
+  --status-full:      #ff9500;
+  --status-progress:  #0057ff;
+  --status-done:      #b0b0b0;
+  --status-cancel:    #ff3b3b;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'Instrument Sans', sans-serif;
+
+  --nav-w: 220px;
+  --r:     6px;
+  --r-lg:  12px;
+  --ease:  cubic-bezier(0.16, 1, 0.3, 1);
+  --t:     180ms;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: var(--font-body); }
+input, textarea, select { font-family: var(--font-body); }
+img { max-width: 100%; display: block; }
+
+/* Stat numbers use display font */
+.display { font-family: var(--font-display) !important; letter-spacing: 0.02em; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.fade-up { animation: fadeUp 0.35s var(--ease) both; }
+.fade-up-1 { animation: fadeUp 0.35s var(--ease) 0.05s both; }
+.fade-up-2 { animation: fadeUp 0.35s var(--ease) 0.10s both; }
+.fade-up-3 { animation: fadeUp 0.35s var(--ease) 0.15s both; }
+.fade-up-4 { animation: fadeUp 0.35s var(--ease) 0.20s both; }
