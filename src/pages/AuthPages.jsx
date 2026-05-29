@@ -5,18 +5,18 @@ import useAuthStore from '../store/authStore';
 import { Button, Input, Select, Divider } from '../components/ui';
 
 const CAREERS = [
-  'Ingeniería en Sistemas Computacionales',
+  'Licenciatura en Administración',
+  'Ingeniería Ambiental',
+  'Ingeniería Bioquímica',
+  'Ingeniería en Electrónica',
+  'Ingeniería en Gestión Empresarial',
   'Ingeniería Industrial',
+  'Ingeniería Mecánica',
   'Ingeniería Mecatrónica',
-  'Ingeniería Civil',
-  'Ingeniería Electrónica',
-  'Administración de Empresas',
-  'Contaduría Pública',
-  'Derecho',
-  'Medicina',
-  'Psicología',
-  'Diseño Gráfico',
-  'Arquitectura',
+  'Ingeniería Química',
+  'Ingeniería en Semiconductores',
+  'Ingeniería en Sistemas Computacionales',
+  'Maestrias',
 ].map((c) => ({ value: c, label: c }));
 
 const SEMESTERS = Array.from({ length: 12 }, (_, i) => ({
